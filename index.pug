@@ -1,0 +1,27 @@
+- const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+- const notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b', 'c2']
+
+mixin note(note, i)
+  - let h = rand(0, 360)
+  - let sound = note === 'c2' ? 2 : note
+  .note(style=`--h: ${--h}; --i: ${--i};` class=`note-${note}` data-key=`${sound}`)
+    kbd #{note}
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="styles.css")
+  body
+    main
+      .xylophone
+          each note, index in notes
+            - let sound = note === 'c2' ? 2 : note
+            +note(note, index)
+            audio(data-key=`${sound}` src=`https://s3-us-west-2.amazonaws.com/s.cdpn.io/1312918/${sound}.wav`)
+      p Press letters on keyboard or click to play sounds
+          br
+          span (press 2 for c2)
+          br
+      script(src="index.js")

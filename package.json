@@ -1,0 +1,15 @@
+{
+  "name": "xylophone",
+  "version": "1.0.0",
+  "description": "An Interactive Xylophone built with Pug, JS and CSS",
+  "main": "index.js",
+  "scripts": {
+    "compile": "pug index.pug --out ." 
+  },
+  "keywords": ["Xylophone", "Pug", "CSS", "JS"],
+  "author": "Gary Byrne",
+  "license": "ISC",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
