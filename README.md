@@ -1,2 +1,6 @@
-# xylophone
-An Interactive Xylophone built with Pug, JS and CSS
+# Interactive Xylophone
+
+Hi! This repo is for an interactive xylophone that plays the corresponding notes.
+
+Url:
+[Codepen](https://codepen.io/garyb1/pen/XWmLXgd/)
